@@ -10,7 +10,7 @@ Sister project of [KrelboyneOS](https://github.com/grumpy-gaming/KrelboyneOS), w
 
 - Steam (Proton comes with Steam Play)
 - RetroArch with a starter set of cores, and ES-DE as the game frontend
-- Firefox ESR, conky, the Onboard on-screen keyboard
+- Firefox ESR, the Onboard on-screen keyboard
 - PipeWire sound, Wi-Fi and firmware
 
 Anything else is opt-in and untested, at your own risk.
