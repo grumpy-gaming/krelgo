@@ -2,7 +2,7 @@
 
 A gaming OS for the Lenovo Legion Go, built on Debian 13 (trixie) with live-build. It boots to an Xfce desktop with the dark teal Krelboyne look.
 
-**Status: early work, not yet built or tested.**
+**Status: early work.** The ISO builds and runs in a VM; testing on the Legion Go is next.
 
 Sister project of [KrelboyneOS](https://github.com/grumpy-gaming/KrelboyneOS), which this repo's layout is copied from.
 
@@ -10,7 +10,7 @@ Sister project of [KrelboyneOS](https://github.com/grumpy-gaming/KrelboyneOS), w
 
 - Steam (Proton comes with Steam Play)
 - RetroArch with a starter set of cores, and ES-DE as the game frontend
-- Firefox ESR, the Onboard on-screen keyboard
+- Firefox ESR and the Onboard on-screen keyboard
 - PipeWire sound, Wi-Fi and firmware
 
 Anything else is opt-in and untested, at your own risk.
