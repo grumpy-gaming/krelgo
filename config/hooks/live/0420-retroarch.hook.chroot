@@ -1,0 +1,6 @@
+#!/bin/sh
+set -e
+# Use SDL's built-in controller mappings; Debian ships no RetroArch
+# autoconfig profiles, so the default udev driver sees no buttons
+sed -i 's|^# input_joypad_driver =$|input_joypad_driver = "sdl2"|' /etc/retroarch.cfg
+grep -q '^input_joypad_driver = "sdl2"$' /etc/retroarch.cfg
