@@ -1,0 +1,12 @@
+# RetroArch and a starter set of cores (Steam is installed by a hook, since it needs i386)
+retroarch
+libretro-core-info
+libretro-nestopia
+libretro-snes9x
+libretro-genesisplusgx
+libretro-gambatte
+libretro-mgba
+libretro-desmume
+
+# ES-DE ships as an AppImage, which needs FUSE 2
+libfuse2t64

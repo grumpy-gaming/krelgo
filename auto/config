@@ -1,0 +1,17 @@
+#!/bin/sh
+
+set -e
+
+# Name, hostname and ISO name come from the branding file
+. config/includes.chroot/etc/krelgo/branding.conf
+
+lb config noauto \
+	--distribution trixie \
+	--architectures amd64 \
+	--archive-areas "main contrib non-free non-free-firmware" \
+	--image-name "$DISTRO_IMAGE" \
+	--iso-application "$DISTRO_NAME" \
+	--iso-volume "$DISTRO_SHORT" \
+	--iso-publisher "$DISTRO_NAME" \
+	--bootappend-live "boot=live components username=grumpy hostname=$DISTRO_ID live-config.user-fullname=Grumpy" \
+	"${@}"

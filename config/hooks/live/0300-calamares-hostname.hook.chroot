@@ -1,0 +1,4 @@
+#!/bin/sh
+set -e
+. /etc/krelgo/branding.conf
+printf '\nhostname:\n    template: "%s"\n' "$DISTRO_ID" >> /etc/calamares/modules/users.conf

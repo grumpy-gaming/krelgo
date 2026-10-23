@@ -1,0 +1,19 @@
+#!/bin/sh
+set -e
+# ES-DE Linux x64 AppImage, the download linked from es-de.org.
+# A new ES-DE release needs a new URL and hash here.
+URL=https://gitlab.com/es-de/emulationstation-de/-/package_files/357718352/download
+SHA256=abc2999a12385f85775bd3f986fa891c76b69df3791f7c12e4c783cf3c3630f5
+mkdir -p /opt/es-de
+curl -fsSLo /opt/es-de/ES-DE_x64.AppImage "$URL"
+echo "$SHA256  /opt/es-de/ES-DE_x64.AppImage" | sha256sum -c -
+chmod +x /opt/es-de/ES-DE_x64.AppImage
+cat > /usr/share/applications/es-de.desktop <<'DESKTOP'
+[Desktop Entry]
+Type=Application
+Name=ES-DE
+Comment=EmulationStation Desktop Edition game frontend
+Exec=/opt/es-de/ES-DE_x64.AppImage
+Icon=applications-games
+Categories=Game;
+DESKTOP

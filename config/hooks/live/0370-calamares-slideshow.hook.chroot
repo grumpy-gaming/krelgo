@@ -1,0 +1,7 @@
+#!/bin/sh
+set -e
+. /etc/krelgo/branding.conf
+B=/etc/calamares/branding/debian
+cp /usr/share/krelboyneos/branding/slide.png $B/krelboyneos-slide.png
+sed -i -e 's|"slide1.png"|"krelboyneos-slide.png"|' $B/show.qml
+sed -i -e "s|Welcome to Debian GNU/Linux\.|Welcome to $DISTRO_NAME.|" $B/show.qml

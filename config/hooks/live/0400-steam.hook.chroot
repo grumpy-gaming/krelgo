@@ -1,0 +1,6 @@
+#!/bin/sh
+set -e
+# Steam needs 32-bit libraries; this pulls in the i386 Mesa and Vulkan drivers too
+dpkg --add-architecture i386
+apt-get update
+apt-get install -y steam-installer

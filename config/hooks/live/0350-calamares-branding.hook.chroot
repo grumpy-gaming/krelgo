@@ -1,0 +1,31 @@
+#!/bin/sh
+set -e
+. /etc/krelgo/branding.conf
+B=/etc/calamares/branding/debian
+S=/usr/share/krelboyneos/branding
+cp $S/logo.png $B/krelboyneos-logo.png
+cp $S/welcome.png $B/krelboyneos-welcome.png
+sed -i \
+  -e "s|^\( *productName:\) .*|\1 \"$DISTRO_NAME\"|" \
+  -e "s|^\( *shortProductName:\) .*|\1 \"$DISTRO_SHORT\"|" \
+  -e "s|^\( *version:\) .*|\1 \"$DISTRO_VERSION\"|" \
+  -e "s|^\( *shortVersion:\) .*|\1 \"$DISTRO_VERSION\"|" \
+  -e "s|^\( *versionedName:\) .*|\1 \"$DISTRO_NAME $DISTRO_VERSION\"|" \
+  -e "s|^\( *shortVersionedName:\) .*|\1 \"$DISTRO_SHORT $DISTRO_VERSION\"|" \
+  -e "s|^\( *bootloaderEntryName:\) .*|\1 \"$DISTRO_NAME\"|" \
+  -e 's|^\( *productLogo:\) .*|\1 "krelboyneos-logo.png"|' \
+  -e 's|^\( *productIcon:\) .*|\1 "krelboyneos-logo.png"|' \
+  -e 's|^\( *productWelcome:\) .*|\1 "krelboyneos-welcome.png"|' \
+  -e "s|^\( *productUrl:\) .*|\1 $DISTRO_URL|" \
+  -e "s|^\( *supportUrl:\) .*|\1 $DISTRO_SUPPORT_URL|" \
+  -e "s|^\( *knownIssuesUrl:\) .*|\1 $DISTRO_SUPPORT_URL|" \
+  -e "s|^\( *releaseNotesUrl:\) .*|\1 $DISTRO_URL/releases|" \
+  -e "s|^\( *donateUrl:\) .*|\1 $DISTRO_DONATE_URL|" \
+  $B/branding.desc
+# Show the Donate button (Ko-fi) on the welcome page
+W=/etc/calamares/modules/welcome.conf
+grep -q '^showDonateUrl:' $W || sed -i '/^showReleaseNotesUrl:/a showDonateUrl:          true' $W
+D=/usr/share/applications/calamares-install-debian.desktop
+sed -i -e "s|^Name=.*|Name=Install $DISTRO_NAME|" $D
+sed -i -e "s|^Comment=.*|Comment=Install $DISTRO_NAME to disk|" $D
+sed -i -e 's|^Icon=.*|Icon=/usr/share/krelboyneos/branding/logo.png|' $D
