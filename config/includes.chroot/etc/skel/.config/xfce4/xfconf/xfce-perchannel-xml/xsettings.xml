@@ -5,4 +5,7 @@
     <property name="ThemeName" type="string" value="Arc-Dark"/>
     <property name="IconThemeName" type="string" value="Papirus-Dark"/>
   </property>
+  <property name="Xft" type="empty">
+    <property name="DPI" type="int" value="160"/>
+  </property>
 </channel>

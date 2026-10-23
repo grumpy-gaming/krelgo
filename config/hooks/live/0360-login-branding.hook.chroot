@@ -3,3 +3,5 @@ set -e
 F=/usr/share/lightdm/lightdm-gtk-greeter.conf.d/01_debian.conf
 sed -i -e 's|^background=.*|background=/usr/share/krelboyneos/branding/login.jpg|' $F
 sed -i -e 's|^theme-name=.*|theme-name=Arc-Dark|' $F
+# Text size for the Go's 8.8 inch screen on the login screen
+grep -q '^xft-dpi=' $F || sed -i '/^\[greeter\]/a xft-dpi=160' $F

@@ -1,0 +1,9 @@
+#!/bin/sh
+# Legion Go: the panel is natively portrait (1600x2560 on output eDP).
+# Turn it to landscape (2560x1600) at 144 Hz, falling back to the default
+# rate. On other screens xrandr finds no such output or mode and changes nothing.
+# Run by LightDM for the login screen and again for each session.
+xrandr --output eDP --mode 1600x2560 --rate 144 --rotate left 2>/dev/null ||
+	xrandr --output eDP --mode 1600x2560 --rotate left 2>/dev/null ||
+	true
+exit 0
