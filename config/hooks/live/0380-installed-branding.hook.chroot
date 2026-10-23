@@ -1,10 +1,14 @@
 #!/bin/sh
 set -e
+. /etc/krelgo/branding.conf
 # GRUB theme fonts (GRUB needs its own .pf2 font format)
-T=/boot/grub/themes/krelboyneos
+T=/boot/grub/themes/krelgo
 F=/usr/share/fonts/truetype/dejavu
 grub-mkfont -s 16 -o $T/dejavu_sans_16.pf2 $F/DejaVuSans.ttf
 grub-mkfont -s 16 -o $T/dejavu_sans_bold_16.pf2 $F/DejaVuSans-Bold.ttf
 grub-mkfont -s 12 -o $T/dejavu_sans_12.pf2 $F/DejaVuSans.ttf
-# KrelboyneOS boot splash (the installer rebuilds the initramfs with it)
-plymouth-set-default-theme krelboyneos
+# Put the name into the GRUB countdown text and the splash theme
+P=/usr/share/plymouth/themes/krelgo
+sed -i "s|@DISTRO_NAME@|$DISTRO_NAME|g" $T/theme.txt $P/krelgo.plymouth
+# Krelboyne Go boot splash (the installer rebuilds the initramfs with it)
+plymouth-set-default-theme krelgo

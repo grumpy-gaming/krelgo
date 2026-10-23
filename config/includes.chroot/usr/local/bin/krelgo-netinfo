@@ -1,5 +1,5 @@
 #!/bin/sh
-# KrelboyneOS panel readout for xfce4-genmon-plugin
+# Krelboyne Go panel readout for xfce4-genmon-plugin
 # Prints the LAN IP and the VPN IP using the genmon tags (<txt>, <tool>, <txtclick>).
 # VPN interfaces recognised: tun*, tap*, wg*, tailscale*, ppp*
 

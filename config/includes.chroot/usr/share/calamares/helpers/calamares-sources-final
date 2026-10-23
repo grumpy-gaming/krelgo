@@ -1,7 +1,7 @@
 #!/bin/sh
 #
 # Writes the final sources.list file
-# KrelboyneOS: includes contrib and non-free (upstream Debian ships main only)
+# Krelboyne Go: includes contrib and non-free (upstream Debian ships main only)
 #
 
 CHROOT=$(mount | grep proc | grep calamares | awk '{print $3}' | sed -e "s#/proc##g")

@@ -1,4 +1,4 @@
-# KrelboyneOS boot splash (Plymouth "script" plugin)
+# Krelboyne Go boot splash (Plymouth "script" plugin)
 # Background picture, a progress bar, boot messages and the disk password box.
 
 Window.SetBackgroundTopColor(0.01, 0.02, 0.06);

@@ -1,4 +1,4 @@
-# KrelboyneOS GRUB theme for the installed system
+# Krelboyne Go GRUB theme for the installed system
 # (the live CD's boot menu is in config/bootloaders/grub-pc/live-theme)
 desktop-image: "background.jpg"
 desktop-color: "#03060f"
@@ -34,7 +34,7 @@ terminal-font: "DejaVu Sans Regular 16"
         align = "center"
         color = "#7fa7c0"
         font = "DejaVu Sans Regular 12"
-        text = "Starting KrelboyneOS in %d seconds"
+        text = "Starting @DISTRO_NAME@ in %d seconds"
 }
 
 #help bar at the bottom
