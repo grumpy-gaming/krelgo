@@ -2,4 +2,4 @@
 set -e
 f=/usr/share/backgrounds/xfce/xfce-x.svg
 dpkg-divert --local --rename --add "$f"
-ln -sf /usr/share/backgrounds/krelboyneos/wallpaper.jpg "$f"
+ln -sf /usr/share/backgrounds/krelgo/wallpaper.jpg "$f"

@@ -30,3 +30,4 @@ The ISO, `krelboynego-amd64.hybrid.iso`, appears in the project folder.
 - `config/package-lists/`: packages in the image
 - `config/hooks/live/`: build scripts (Steam, ES-DE, branding)
 - `config/includes.chroot/`: files copied into the image as they are
+- `artwork/`: original artwork. The 2560x1600 wallpaper is this image scaled to 1600 high, trimmed on the left, with the tagline redrawn larger in Jura SemiBold (Debian package `fonts-jura`)
