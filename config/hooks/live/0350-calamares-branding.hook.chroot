@@ -12,7 +12,7 @@ sed -i \
   -e "s|^\( *shortVersion:\) .*|\1 \"$DISTRO_VERSION\"|" \
   -e "s|^\( *versionedName:\) .*|\1 \"$DISTRO_NAME $DISTRO_VERSION\"|" \
   -e "s|^\( *shortVersionedName:\) .*|\1 \"$DISTRO_SHORT $DISTRO_VERSION\"|" \
-  -e "s|^\( *bootloaderEntryName:\) .*|\1 \"$DISTRO_NAME\"|" \
+  -e "s|^\( *bootloaderEntryName:\) .*|\1 \"$DISTRO_SHORT\"|" \
   -e 's|^\( *productLogo:\) .*|\1 "krelgo-logo.png"|' \
   -e 's|^\( *productIcon:\) .*|\1 "krelgo-logo.png"|' \
   -e 's|^\( *productWelcome:\) .*|\1 "krelgo-welcome.png"|' \
