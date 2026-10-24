@@ -26,9 +26,14 @@ Anything else is opt-in and untested, at your own risk.
 
 Works: live boot, install to the internal SSD, landscape at 144 Hz, AMD graphics, Wi-Fi, sound, touchpad, touchscreen, the controller in Steam, ES-DE and RetroArch, Steam games through Proton.
 
-Not tested yet: sleep and resume, the volume and brightness buttons, rumble, the rear paddles and the gyro.
+Not tested yet: sleep and resume, the volume and brightness buttons, rumble, the rear paddles and the gyro ([#4](https://github.com/grumpy-gaming/krelgo/issues/4)).
 
-The boot menu appears sideways, because the Go's screen is portrait until Linux starts.
+## Known issues (0.1.0)
+
+- The boot menu appears sideways, because the Go's screen is portrait until Linux starts ([#1](https://github.com/grumpy-gaming/krelgo/issues/1)).
+- Secure Boot must be off on the Go to boot from a USB stick or microSD card.
+- No volume icon in the panel. Add it with Panel > Add New Items > PulseAudio Plugin. Fixed for 0.1.1 ([#2](https://github.com/grumpy-gaming/krelgo/issues/2)).
+- No on-screen keyboard on the lock screen after suspend. The issue has a one-line fix. Fixed for 0.1.1 ([#3](https://github.com/grumpy-gaming/krelgo/issues/3)).
 
 ## Download
 
