@@ -71,4 +71,10 @@ The ISO, `krelboynego-amd64.hybrid.iso`, appears in the project folder.
 - Email: krelboyneos@gmail.com
 - Like the project? [Ko-fi](https://ko-fi.com/krelboyneos)
 
+## License
+
+Krelboyne Go's own code (the build configuration, hooks, scripts and original artwork) is free software under the [GNU General Public License v3.0 or later](LICENSE). You can use, change and share it; if you share a changed version, it has to stay open under the same license. Steam, RetroArch, ES-DE and everything else in the image keep their own licenses.
+
+The Krelboyne Go name and logo identify this project. Forks are welcome, but please give yours its own name.
+
 Krelboyne Go is made by [grumpy-gaming](https://github.com/grumpy-gaming). It is an independent project, not affiliated with Debian, Lenovo or Valve.
